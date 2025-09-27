@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Serviço Fácil — Confirmar Preço</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body data-page="confirmar_preco">
+    <div class="container">
+      <header class="header">
+        <a class="brand" href="index.html"
+          ><div class="logo">SF</div>
+          Serviço Fácil</a
+        >
+        <nav class="nav">
+          <a class="btn ghost" href="solicitar_servico.html">Voltar</a>
+          <a class="btn" href="lista_solicitacoes.html">Minhas Solicitações</a>
+        </nav>
+      </header>
+
+      <main class="card">
+        <div class="page-title">Confirmar Preço</div>
+        <div style="display: flex; justify-content: space-between; align-items: center">
+          <div>
+            <div class="small">Serviço</div>
+            <div id="tipoInfo" style="font-weight: 700; font-size: 16px"></div>
+          </div>
+          <div style="text-align: right">
+            <div class="small">Preço</div>
+            <div id="precoInfo" style="font-weight: 700; font-size: 16px"></div>
+          </div>
+        </div>
+        <div class="actions" style="margin-top: 18px">
+          <button id="confirmBtn" class="btn">Confirmar e Solicitar</button>
+        </div>
+        <div class="footer-note">
+          Após confirmar o serviço será alocado ao prestador menos alocado.
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="../scripts/client.js"></script>
+  </body>
+</html>

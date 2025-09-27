@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Serviço Fácil — Solicitar Serviço</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body data-page="solicitar">
+    <div class="container">
+      <header class="header">
+        <a class="brand" href="index.html"
+          ><div class="logo">SF</div>
+          Serviço Fácil</a
+        >
+        <nav class="nav">
+          <a class="btn" href="lista_solicitacoes.html">Minhas Solicitações</a>
+          <a class="btn ghost" href="painel_prestador.html">Painel Prestador</a>
+        </nav>
+      </header>
+
+      <main class="card">
+        <div class="page-title">Solicitar Serviço</div>
+        <form id="formServico">
+          <div class="form-row">
+            <label>Tipo de serviço</label>
+            <select id="tipo" required>
+              <option>Encanamento</option>
+              <option>Elétrica</option>
+              <option>Montagem</option>
+              <option>Pintura</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Descrição</label>
+            <input id="desc" type="text" placeholder="Breve descrição do problema" />
+          </div>
+          <div class="actions"><button class="btn" type="submit">Calcular Preço</button></div>
+        </form>
+        <div class="footer-note">
+          Ao confirmar o preço o sistema aloca automaticamente o prestador menos alocado.
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="../scripts/client.js"></script>
+  </body>
+</html>

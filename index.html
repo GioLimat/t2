@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Serviço Fácil — Login</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body data-page="login">
+    <div class="container">
+      <header class="header">
+        <a class="brand" href="index.html"
+          ><div class="logo">SF</div>
+          Serviço Fácil</a
+        >
+        <nav class="nav">
+          <a class="btn ghost" href="cadastro.html">Cadastro</a>
+          <a class="btn" href="solicitar_servico.html">Solicitar Serviço</a>
+          <a class="btn ghost" href="painel_prestador.html">Painel Prestador</a>
+        </nav>
+      </header>
+
+      <main class="card">
+        <div class="page-title">Entrar</div>
+        <form id="formLogin">
+          <div class="form-row">
+            <label>Email</label><input id="loginEmail" type="email" required />
+          </div>
+          <div class="actions"><button class="btn" type="submit">Entrar</button></div>
+        </form>
+      </main>
+    </div>
+
+    <script type="module" src="../scripts/client.js"></script>
+  </body>
+</html>
