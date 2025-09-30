@@ -5,30 +5,55 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Serviço Fácil — Cadastro</title>
     <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/register.js"></script>
   </head>
-  <body data-page="cadastro">
+  <body>
     <div class="container">
-      <header class="header">
-        <a class="brand" href="index.html"
-          ><div class="logo">SF</div>
-          Serviço Fácil</a
-        >
-        <nav class="nav">
-          <a class="btn" href="index.html">Login</a>
-          <a class="btn ghost" href="solicitar_servico.html">Solicitar Serviço</a>
-        </nav>
-      </header>
+      <header class="header" id="navbar"></header>
 
-      <main class="card">
-        <div class="page-title">Cadastro de Cliente</div>
-        <form id="formCadastro">
-          <div class="form-row"><label>Nome</label><input id="nome" type="text" required /></div>
-          <div class="form-row"><label>Email</label><input id="email" type="email" required /></div>
-          <div class="actions"><button class="btn" type="submit">Cadastrar</button></div>
-        </form>
-      </main>
+      <div class="auth-wrapper">
+        <div class="auth-card">
+          <h2>Criar uma conta</h2>
+          <form id="formRegister">
+            <div class="form-row">
+              <label for="registerName">Nome completo</label>
+              <input id="registerName" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="registerEmail">Email</label>
+              <input id="registerEmail" type="email" required />
+            </div>
+            <div class="form-row">
+              <label for="registerPassword">Senha</label>
+              <input id="registerPassword" type="password" required />
+            </div>
+            <div class="form-row">
+              <label for="registerConfirmPassword">Confirmar senha</label>
+              <input id="registerConfirmPassword" type="password" required />
+            </div>
+            <div class="form-row">
+              <label>Tipo de conta</label>
+              <select id="registerRole" required>
+                <option value="">Selecione...</option>
+                <option value="cliente">Cliente</option>
+                <option value="prestador">Prestador de Serviço</option>
+              </select>
+            </div>
+            <button class="btn" type="submit">Cadastrar</button>
+          </form>
+
+          <!-- Tela de confirmação fake escondida -->
+          <div id="confirmacaoCadastro" style="display: none">
+            <h3>Confirmação de Cadastro</h3>
+            <p>Enviamos um link de confirmação para o seu email. Clique em "Ok" para continuar.</p>
+            <button id="btnConfirmarCadastro" class="btn">Ok</button>
+          </div>
+
+          <div class="auth-footer">Já tem conta? <a href="login.html">Entre aqui</a></div>
+        </div>
+      </div>
     </div>
-
-    <script type="module" src="../scripts/client.js"></script>
   </body>
 </html>

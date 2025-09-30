@@ -5,44 +5,66 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Serviço Fácil — Solicitar Serviço</title>
     <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/solicitar.js"></script>
   </head>
-  <body data-page="solicitar">
+  <body>
     <div class="container">
-      <header class="header">
-        <a class="brand" href="index.html"
-          ><div class="logo">SF</div>
-          Serviço Fácil</a
-        >
-        <nav class="nav">
-          <a class="btn" href="lista_solicitacoes.html">Minhas Solicitações</a>
-          <a class="btn ghost" href="painel_prestador.html">Painel Prestador</a>
-        </nav>
-      </header>
-
+      <header class="header" id="navbar"></header>
       <main class="card">
         <div class="page-title">Solicitar Serviço</div>
-        <form id="formServico">
-          <div class="form-row">
-            <label>Tipo de serviço</label>
-            <select id="tipo" required>
-              <option>Encanamento</option>
-              <option>Elétrica</option>
-              <option>Montagem</option>
-              <option>Pintura</option>
-            </select>
+        <form id="formSolicitar" class="form-servico">
+          <div>
+            <label for="tipoServico">Tipo de Serviço</label>
+            <select id="tipoServico" required></select>
           </div>
-          <div class="form-row">
-            <label>Descrição</label>
-            <input id="desc" type="text" placeholder="Breve descrição do problema" />
+          <div>
+            <label for="servico">Serviço</label>
+            <select id="servico" required></select>
           </div>
-          <div class="actions"><button class="btn" type="submit">Calcular Preço</button></div>
+          <div>
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" placeholder="Descreva seu problema..."></textarea>
+          </div>
+          <button class="btn" type="submit">Adicionar Solicitação</button>
         </form>
-        <div class="footer-note">
-          Ao confirmar o preço o sistema aloca automaticamente o prestador menos alocado.
+        <div id="confirmarPreco" class="card" style="display: none; margin-top: 20px">
+          <h3>Confirme o Preço do Serviço</h3>
+          <table>
+            <tr>
+              <th>Tipo de Serviço:</th>
+              <td id="precoTipo"></td>
+            </tr>
+            <tr>
+              <th>Serviço:</th>
+              <td id="precoServico"></td>
+            </tr>
+            <tr>
+              <th>Preço:</th>
+              <td id="precoValor">R$ 200,00</td>
+            </tr>
+            <tr>
+              <th>Seu crédito:</th>
+              <td id="precoCredito">R$ 10,00</td>
+            </tr>
+            <tr>
+              <th>Valor a ser cobrado:</th>
+              <td id="precoCobrado">R$ 190,00</td>
+            </tr>
+          </table>
+          <div class="actions">
+            <button class="btn ghost" id="cancelarPreco">Cancelar</button>
+            <button class="btn" id="confirmarPrecoBtn">Confirmar</button>
+          </div>
+        </div>
+        <div id="confirmacao" style="display: none; margin-top: 20px">
+          <h3>Solicitação Confirmada</h3>
+          <p><strong>Número de solicitação:</strong> <span id="confNumero"></span></p>
+          <p><strong>Prestador:</strong> <span id="confPrestador"></span></p>
+          <a href="lista_solicitacoes.html" class="btn ghost">Ir para sua lista de solicitações</a>
         </div>
       </main>
     </div>
-
-    <script type="module" src="../scripts/client.js"></script>
   </body>
 </html>
