@@ -619,3 +619,40 @@ tbody tr:nth-child(even) {
   resize: vertical;
   min-height: 80px;
 }
+.erro {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.lista-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.lista-header-info {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.lista-header-credit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+.section h3 {
+  color: var(--purple-700);
+  margin-bottom: 12px;
+}
