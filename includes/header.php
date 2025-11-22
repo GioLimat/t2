@@ -23,7 +23,7 @@ $user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
             <span style="font-weight:600; color:var(--purple-700); margin-left:10px;">
         Olá, <?php echo htmlspecialchars($user['nome']); ?>
       </span>
-            <a class="btn ghost" href="logout.php">Sair</a>
+            <a class="btn ghost" href="./includes/logout.php">Sair</a>
         <?php endif; ?>
     </nav>
 </header>
